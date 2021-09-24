@@ -19,6 +19,7 @@ define([
         defaults: {
             template: 'Andre_M2Sample/sample-step'
         },
+        sampleMessage: window.checkoutConfig.sampleMessage,
 
         isVisible: ko.observable(false),
 
@@ -77,6 +78,15 @@ define([
          */
         navigateToNextStep: function () {
             stepNavigator.next();
+        },
+
+        /**
+         * Get config message from admin
+         *
+         * @returns {*}
+         */
+        getConfigMessage: function () {
+            return this.sampleMessage;
         }
     });
 });

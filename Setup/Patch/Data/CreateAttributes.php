@@ -2,6 +2,7 @@
 /**
  * @author Andre Santos <flp_andre@yahoo.com.br>
  */
+
 declare(strict_types=1);
 
 namespace Andre\M2Sample\Setup\Patch\Data;

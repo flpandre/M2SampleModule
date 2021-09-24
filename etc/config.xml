@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Andre Santos <flp_andre@yahoo.com.br>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <general>
+            <sample_group>
+                <sample_message>Custom Message on Checkout</sample_message>
+            </sample_group>
+        </general>
+    </default>
+</config>
