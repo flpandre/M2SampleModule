@@ -11,7 +11,14 @@
          data-role="content">
 
         <form data-bind="submit: navigateToNextStep" novalidate="novalidate">
+            <strong data-bind="text: getConfigMessage()"></strong>
             <div class="actions-toolbar">
+                <div class="primary">
+                    <button type="submit" class="button action secondary">
+                        <span><!-- ko i18n: 'Back to Cart'--><!-- /ko --></span>
+                    </button>
+                </div>
+
                 <div class="primary">
                     <button data-role="opc-continue" type="submit" class="button action continue primary">
                         <span><!-- ko i18n: 'Next'--><!-- /ko --></span>
