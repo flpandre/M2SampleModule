@@ -46,6 +46,11 @@ define([
             return this;
         },
 
+        /**
+         * Determine if custom checkout step should be visible
+         *
+         * @returns {boolean}
+         */
         isStepVisible: function () {
             let items = quote.getItems();
 
@@ -60,6 +65,7 @@ define([
 
         /**
          * Get step title
+         *
          * @returns {*}
          */
         getTitle: function () {
@@ -74,6 +80,8 @@ define([
         },
 
         /**
+         * Just go to next step
+         *
          * @returns void
          */
         navigateToNextStep: function () {

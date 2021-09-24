@@ -7,11 +7,11 @@ declare(strict_types=1);
 
 namespace Andre\M2Sample\Setup\Patch\Data;
 
-use Magento\Eav\Setup\EavSetupFactory;
-use Magento\Framework\Setup\Patch\DataPatchInterface;
-use Magento\Framework\Setup\ModuleDataSetupInterface;
-use Magento\Catalog\Model\ResourceModel\Eav\Attribute;
 use Magento\Catalog\Model\Product;
+use Magento\Catalog\Model\ResourceModel\Eav\Attribute;
+use Magento\Eav\Setup\EavSetupFactory;
+use Magento\Framework\Setup\ModuleDataSetupInterface;
+use Magento\Framework\Setup\Patch\DataPatchInterface;
 
 class CreateAttributes implements DataPatchInterface
 {
@@ -50,6 +50,22 @@ class CreateAttributes implements DataPatchInterface
         }
 
         $this->moduleDataSetup->getConnection()->endSetup();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAliases() : array
+    {
+        return [];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function getDependencies() : array
+    {
+        return [];
     }
 
     /**
@@ -105,21 +121,5 @@ class CreateAttributes implements DataPatchInterface
                 'apply_to' => ''
             ]
         ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function getDependencies() : array
-    {
-        return [];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getAliases() : array
-    {
-        return [];
     }
 }

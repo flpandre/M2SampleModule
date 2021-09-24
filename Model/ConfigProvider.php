@@ -12,7 +12,10 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
 
 class ConfigProvider implements ConfigProviderInterface
 {
+    /** @var string  */
     private const SAMPLE_DATA_CONFIG = 'sampleMessage';
+
+    /** @var string  */
     private const XPATH_SAMPLE_MESSAGE = 'general/sample_group/sample_message';
 
     /** @var ScopeConfigInterface */
@@ -23,6 +26,11 @@ class ConfigProvider implements ConfigProviderInterface
         $this->scopeConfig = $scopeConfig;
     }
 
+    /**
+     * Include custom config to checkout data
+     *
+     * @return array
+     */
     public function getConfig(): array
     {
         return [
