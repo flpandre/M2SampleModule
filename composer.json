@@ -8,7 +8,8 @@
     "license": "OSL-3.0",
     "require": {
         "php": ">=7.3",
-        "magento/framework": "^102|^103"
+        "magento/framework": "^102|^103",
+        "magento/module-checkout": "^100"
     },
     "autoload": {
         "files":
