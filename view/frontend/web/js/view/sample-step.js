@@ -20,6 +20,7 @@ define([
             template: 'Andre_M2Sample/sample-step'
         },
         sampleMessage: window.checkoutConfig.sampleMessage,
+        cartUrl: window.checkoutConfig.cartUrl,
 
         isVisible: ko.observable(false),
 
@@ -29,7 +30,6 @@ define([
         initialize: function () {
             this._super();
 
-            console.log(quote.getItems());
             if (this.isStepVisible()) {
                 this.isVisible(true);
 
@@ -87,6 +87,13 @@ define([
          */
         getConfigMessage: function () {
             return this.sampleMessage;
+        },
+
+        /**
+         * Redirect to cart page
+         */
+        backToCart: function () {
+            window.location.replace(this.cartUrl);
         }
     });
 });
