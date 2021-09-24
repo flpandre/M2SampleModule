@@ -1,0 +1,22 @@
+{
+    "name": "andre/module-m2sample",
+    "description": "Sample code with additional features demo",
+    "type": "magento2-module",
+    "version": "0.1.0",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "license": "OSL-3.0",
+    "require": {
+        "php": ">=7.3",
+        "magento/framework": "^102|^103"
+    },
+    "autoload": {
+        "files":
+        [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Andre\\M2Sample\\": ""
+        }
+    }
+}
