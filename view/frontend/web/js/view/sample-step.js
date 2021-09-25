@@ -101,7 +101,7 @@ define([
          * Redirect to cart page
          */
         backToCart: function () {
-            window.location.replace(this.cartUrl);
+            window.location.assign(this.cartUrl);
         }
     });
 });
