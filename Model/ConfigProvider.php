@@ -19,7 +19,7 @@ class ConfigProvider implements ConfigProviderInterface
     private const XPATH_SAMPLE_MESSAGE = 'general/sample_group/sample_message';
 
     /** @var ScopeConfigInterface */
-    private ScopeConfigInterface $scopeConfig;
+    private $scopeConfig;
 
     public function __construct(ScopeConfigInterface $scopeConfig)
     {
